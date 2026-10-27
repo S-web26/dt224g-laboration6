@@ -10,3 +10,8 @@ const searchInput = document.querySelector("#search");
 const errorMessage = document.querySelector("#error");
 const apiMessage = document.querySelector("#message");
 const recipeSection = document.querySelector("#recipe");
+
+// Lyssna när användaren skickar sökformuälret
+searchForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+});
