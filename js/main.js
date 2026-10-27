@@ -17,4 +17,10 @@ searchForm.addEventListener("submit", function(event) {
 
     // Läs sökfrasen från formuläret
     const searchTerm = searchInput.value.trim();
+
+    // Kontrollera om sökfältet är tomt
+    if (searchTerm === "") {
+        errorMessage.textContent = "Du måste fylla i en sökfras!";
+        return;
+    }
 });
