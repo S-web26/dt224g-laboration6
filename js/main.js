@@ -23,4 +23,7 @@ searchForm.addEventListener("submit", function(event) {
         errorMessage.textContent = "Du måste fylla i en sökfras!";
         return;
     }
+
+    // Ta bort den tidigare felmeddelande när en giltig sökning skrivs in
+    errorMessage.textContent = "";
 });
