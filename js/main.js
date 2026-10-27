@@ -14,4 +14,7 @@ const recipeSection = document.querySelector("#recipe");
 // Lyssna när användaren skickar sökformuälret
 searchForm.addEventListener("submit", function(event) {
     event.preventDefault();
+
+    // Läs sökfrasen från formuläret
+    const searchTerm = searchInput.value.trim();
 });
