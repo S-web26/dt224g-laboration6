@@ -26,4 +26,7 @@ searchForm.addEventListener("submit", function(event) {
 
     // Ta bort den tidigare felmeddelande när en giltig sökning skrivs in
     errorMessage.textContent = "";
+
+    // Skapa API-adressen med användarens sökfras
+    const apiUrl = "https://dummyjson.com/recipes/search?q=" + searchTerm;
 });
