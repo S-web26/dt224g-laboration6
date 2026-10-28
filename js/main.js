@@ -37,5 +37,23 @@ searchForm.addEventListener("submit", function(event) {
     // Hämtar recept från API:et
     async function getRecipes(url) {
         const response = await fetch(url);
+
+        // Omvandla svaret från API:et till Javascript data
+        const data = await response.json();
+
+        // Ta bort tidigare meddelanden
+        apiMessage.textContent = "";
+
+        // Kontrollera om några recept har hittats
+        if (data.recipes.length === 0) {
+            apiMessage.textContent = "Inget recept hittades, prova en ny sökfras.";
+            return;
+        }
+
+        // Hämta det första receptet från resultatet
+        const firstRecipe = data.recipes[0];
+
+        // Testa att rätt recept hämtas
+        console.log(firstRecipe);
         
     }
