@@ -29,4 +29,13 @@ searchForm.addEventListener("submit", function(event) {
 
     // Skapa API-adressen med användarens sökfras
     const apiUrl = "https://dummyjson.com/recipes/search?q=" + searchTerm;
+
+    // Hämtar recept från API:et
+    getRecipes(apiUrl);
 });
+
+    // Hämtar recept från API:et
+    async function getRecipes(url) {
+        const response = await fetch(url);
+        
+    }
