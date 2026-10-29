@@ -76,6 +76,23 @@ searchForm.addEventListener("submit", function(event) {
         image.alt = recipe.name;
         article.appendChild(image);
 
+        // Skapa ett område för receptets information
+        const recipeInfo = document.createElement("div");
+        recipeInfo.className = "recipe-info";
+
+        // Visa antal portioner
+        const servings = document.createElement("p");
+        servings.textContent = "Portioner: " + recipe.servings;
+        recipeInfo.appendChild(servings);
+
+        // Visa förberedelsetid
+        const prepTime = document.createElement("p");
+        prepTime.textContent = "Förberedelsetid: " + recipe.prepTimeMinutes + " minuter";
+        recipeInfo.appendChild(prepTime);
+
+        // Lägg till informationen i artikeln
+        article.appendChild(recipeInfo);
+
         // Lägg till artikeln på webbsidan
         recipeSection.appendChild(article);
     } 
