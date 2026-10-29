@@ -70,6 +70,12 @@ searchForm.addEventListener("submit", function(event) {
         heading.textContent = recipe.name;
         article.appendChild(heading);
 
+        // Skapa en bild för receptet
+        const image = document.createElement("img");
+        image.src = recipe.image;
+        image.alt = recipe.name;
+        article.appendChild(image);
+
         // Lägg till artikeln på webbsidan
         recipeSection.appendChild(article);
     } 
