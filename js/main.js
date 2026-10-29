@@ -53,7 +53,23 @@ searchForm.addEventListener("submit", function(event) {
         // Hämta det första receptet från resultatet
         const firstRecipe = data.recipes[0];
 
-        // Testa att rätt recept hämtas
-        console.log(firstRecipe);
-        
+        // Visa det första receptet på webbsidan
+        showRecipe(firstRecipe);   
     }
+
+    // Visa receptet på webbsidan
+    function showRecipe(recipe) {
+        // Ta bort tidigare recept
+        recipeSection.textContent = "";
+
+        // Skapa en artikel för receptet
+        const article = document.createElement("article");
+
+        // Skapa rubriken med receptets namn
+        const heading = document.createElement("h2");
+        heading.textContent = recipe.name;
+        article.appendChild(heading);
+
+        // Lägg till artikeln på webbsidan
+        recipeSection.appendChild(article);
+    } 
