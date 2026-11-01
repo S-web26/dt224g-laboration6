@@ -90,6 +90,16 @@ searchForm.addEventListener("submit", function(event) {
         prepTime.textContent = "Förberedelsetid: " + recipe.prepTimeMinutes + " minuter";
         recipeInfo.appendChild(prepTime);
 
+        // Visa tillagningstid
+        const cookTime = document.createElement("p");
+        cookTime.textContent = "Tillagningstid: " + recipe.cookTimeMinutes + " minuter";
+        recipeInfo.appendChild(cookTime);
+
+        // Visa svåringhetsgrad
+        const difficulty = document.createElement("p");
+        difficulty.textContent = "Svårighetsgrad: " + recipe.difficulty;
+        recipeInfo.appendChild(difficulty);
+
         // Lägg till informationen i artikeln
         article.appendChild(recipeInfo);
 
