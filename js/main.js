@@ -119,6 +119,15 @@ searchForm.addEventListener("submit", function(event) {
         
         article.appendChild(ingredientsList);
 
+        // Skapa rubriken för instruktioner
+        const instructionsHeading = document.createElement("h3");
+        instructionsHeading.textContent = "Instruktioner";
+        article.appendChild(instructionsHeading);
+
+        // Skapa en numrerad lista för instruktionerna
+        const instructionsList = document.createElement("ol");
+        article.appendChild(instructionsList);
+
         // Lägg till artikeln på webbsidan
         recipeSection.appendChild(article);
     } 
