@@ -128,6 +128,13 @@ searchForm.addEventListener("submit", function(event) {
         const instructionsList = document.createElement("ol");
         article.appendChild(instructionsList);
 
+        // Lägg till alla instruktioner i listan
+        recipe.instructions.forEach(function(instruction) {
+            const listItem = document.createElement("li");
+            listItem.textContent = instruction;
+            instructionsList.appendChild(listItem);
+        });
+
         // Lägg till artikeln på webbsidan
         recipeSection.appendChild(article);
     } 
