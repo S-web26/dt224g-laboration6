@@ -47,6 +47,7 @@ searchForm.addEventListener("submit", function(event) {
         // Kontrollera om några recept har hittats
         if (data.recipes.length === 0) {
             apiMessage.textContent = "Inget recept hittades, prova en ny sökfras.";
+            recipeSection.textContent = "";
             return;
         }
 
