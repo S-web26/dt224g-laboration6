@@ -103,6 +103,22 @@ searchForm.addEventListener("submit", function(event) {
         // Lägg till informationen i artikeln
         article.appendChild(recipeInfo);
 
+        // Skapa rubriken för ingredienser
+        const ingredientsHeading = document.createElement("h3");
+        ingredientsHeading.textContent = "Ingredienser";
+        article.appendChild(ingredientsHeading);
+
+        // Skapa en lista med receptets ingredienser
+        const ingredientsList = document.createElement("ul");
+
+        recipe.ingredients.forEach(function(ingredient) {
+            const listItem = document.createElement("li");
+            listItem.textContent = ingredient;
+            ingredientsList.appendChild(listItem);
+        });
+        
+        article.appendChild(ingredientsList);
+
         // Lägg till artikeln på webbsidan
         recipeSection.appendChild(article);
     } 
