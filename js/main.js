@@ -36,6 +36,7 @@ searchForm.addEventListener("submit", function(event) {
 
     // Hämtar recept från API:et
     async function getRecipes(url) {
+        try {
         const response = await fetch(url);
 
         // Omvandla svaret från API:et till Javascript data
@@ -56,6 +57,11 @@ searchForm.addEventListener("submit", function(event) {
 
         // Visa det första receptet på webbsidan
         showRecipe(firstRecipe);   
+    } catch (error) {
+        // Visa ett felmeddelande om API-anropet misslyckas
+        apiMessage.textContent = "Det gick inte att hämta recept. Försök igen senare.";
+        recipeSection.textContent = "";
+      }
     }
 
     // Visa receptet på webbsidan
