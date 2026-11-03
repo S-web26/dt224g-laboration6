@@ -78,7 +78,7 @@ searchForm.addEventListener("submit", function(event) {
         const article = document.createElement("article");
 
         // Skapa rubriken med receptets namn
-        const heading = document.createElement("h2");
+        const heading = document.createElement("h3");
         heading.textContent = recipe.name;
         article.appendChild(heading);
 
@@ -116,7 +116,7 @@ searchForm.addEventListener("submit", function(event) {
         article.appendChild(recipeInfo);
 
         // Skapa rubriken för ingredienser
-        const ingredientsHeading = document.createElement("h3");
+        const ingredientsHeading = document.createElement("h4");
         ingredientsHeading.textContent = "Ingredienser";
         article.appendChild(ingredientsHeading);
 
