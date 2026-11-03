@@ -39,6 +39,11 @@ searchForm.addEventListener("submit", function(event) {
         try {
         const response = await fetch(url);
 
+        // Kontrollera om API-anropet lyckades
+        if (!response.ok) {
+            throw new Error("Fel vid API-anropet");
+        }
+
         // Omvandla svaret från API:et till Javascript data
         const data = await response.json();
 
